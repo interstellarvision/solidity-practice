@@ -5,12 +5,12 @@
 ## Roadmap
 Следую [DeFi Developer Roadmap](https://github.com/OffcierCIA/DeFi-Developer-Road-Map)
 
-**Цель:** Mid-level DeFi Developer к марту 2027
+**Цель:** Junior+ DeFi Developer к марту 2027
 
 ## Contracts
 
 ### SimpleBank
-Первый смарт-контракт - банк с базовой функциональностью.
+Первый смарт-контракт банк с базовой функциональностью.
 
 **Функции:**
 - `deposit()` - внести ETH
@@ -35,7 +35,7 @@
 - **Language:** Solidity ^0.8.20
 
 ## Learning Progress
-- ✅ Step 1: Blockchain Theory (4 weeks) - завершён
+- ✅ Step 1: Blockchain Theory (2 weeks) - завершён
 - 🔄 Step 2: Solidity & Smart Contracts - в процессе
 - ⏳ Step 3: Frontend Integration
 - ⏳ Step 4: Advanced DeFi
