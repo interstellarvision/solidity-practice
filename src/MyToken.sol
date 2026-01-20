@@ -21,14 +21,25 @@ contract MyToken {
 
     function transfer(address _to, uint256 _value) public returns (bool) {
         require(balanceOf[msg.sender] >= _value, "Insufficient balance");
-        // TODO: твой код здесь
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+        emit Transfer(msg.sender, _to, _value);
+        return true;
     }
 
     function approve(address _spender, uint256 _value) public returns (bool) {
-        // TODO: твой код здесь
+        allowance[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+        return true;
     }
 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
-        // TODO: твой код здесь
+        require(balanceOf[_from] >= _value, "insufficient balance");
+        require(allowance[_from][msg.sender] >= _value, "insufficient allowance");
+        allowance[_from][msg.sender] -= _value;
+        balanceOf[_from] -= _value;
+        balanceOf[_to] += _value;
+        emit Transfer(_from, _to, _value);
+        return true;
     }
 }
